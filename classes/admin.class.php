@@ -15,7 +15,7 @@ Class FLAMINGO_GDPR_ADMIN_CLASS {
 		 add_action( 'admin_notices', array( $this, 'admin_notices') );
 		//add_action( 'admin_head', array( $this, 'add_rte_editor_button') );
          add_filter( 'wpcf7_editor_panels',  array( $this, 'show_gdpr_metabox') );
-         add_action( 'wpcf7_after_save',  array( $this, 'wpcf7_cm_save_gdpr' ) );
+         add_action( 'wpcf7_after_save',  array( $this, 'wpcf7_flamingo_save_gdpr' ) );
         
 	}
 
@@ -79,7 +79,7 @@ Class FLAMINGO_GDPR_ADMIN_CLASS {
 
 		$new_page = array(
 			'cme-Extension' => array(
-				'title' => __( 'GDPR', 'contact-form-7' ),
+				'title' => __( 'Flamingo Options', 'contact-form-7' ),
 				'callback' => array($this, 'settings' )
 			)
 		);
@@ -94,7 +94,7 @@ Class FLAMINGO_GDPR_ADMIN_CLASS {
 		?>
 		<div class="metabox-holder">
 			<p class="mail-field">
-				<label for="gdpr-field"><?php echo esc_html( __( 'Enter the field that must have a value in order to save to Flamingo:', 'wpcf7' ) ); ?>   <a href="<?php echo CME_URL ?>" class="helping-field" target="_blank" title="get help with Client API Key"> Help <span class="red-icon dashicons dashicons-sos"></span></a></label><br />
+				<label for="gdpr-field"><?php echo esc_html( __( 'Enter the field that must have a value in order to save to Flamingo:', 'wpcf7' ) ); ?> </label><br />
 				<input type="text" id="gdpr-field" name="gdpr-fields[field]" class="wide" size="70" placeholder="e.g [acceptance 999]" value="<?php echo (isset($fgdpr['field']) ) ? esc_attr( $fgdpr['field'] ) : ''; ?>" />
 			</p>
 
@@ -102,7 +102,7 @@ Class FLAMINGO_GDPR_ADMIN_CLASS {
 		<?php
 	}
 
-	public function wpcf7_cm_save_gdpr($args) {
+	public function wpcf7_flamingo_save_gdpr($args) {
 		if(!empty($_POST)){
 			update_option( 'gdpr-fields_'.$args->id(), $_POST['gdpr-fields'] );
 		}

@@ -32,8 +32,6 @@ function flamingo_gdpr_submit($form) {
 		$props = $wpcf7->get_properties();
 		$settings = ($props['additional_settings']) ? $props['additional_settings'] . "\n" : '';
 	
-	
-
 		// -- Opt In 
 		if ( !$optIn[0] ) {
 			
