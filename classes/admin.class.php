@@ -10,10 +10,7 @@ Class FLAMINGO_GDPR_ADMIN_CLASS {
 
 	public function load_all_hooks() {
 		// --- Add Admin Menu
-		//add_action( 'admin_menu', array( $this, 'add_menu') );
-		//add_action( 'wp_head', array( $this, 'pps_js') );
 		 add_action( 'admin_notices', array( $this, 'admin_notices') );
-		//add_action( 'admin_head', array( $this, 'add_rte_editor_button') );
          add_filter( 'wpcf7_editor_panels',  array( $this, 'show_gdpr_metabox') );
          add_action( 'wpcf7_after_save',  array( $this, 'wpcf7_flamingo_save_gdpr' ) );
         
@@ -65,13 +62,6 @@ Class FLAMINGO_GDPR_ADMIN_CLASS {
 		
 	}
 
-	/**
-	* Add the menu
-	*/
-	public function add_menu() {
-
-		//add_submenu_page('options-general.php', 'Marketing Settings', 'Marketing Settings', 'manage_options', 'cs_sendy_settings', array('CS_SENDY_ADMIN_VIEW', 'settings' ) );
-	}
 
 
 

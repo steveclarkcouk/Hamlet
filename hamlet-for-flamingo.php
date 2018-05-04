@@ -9,7 +9,6 @@ Text Domain: hamlet
 */
 
 require('classes/admin.class.php');
-require('classes/admin.views.class.php');
 
 if( is_admin() ) {
 	$admin = new FLAMINGO_GDPR_ADMIN_CLASS;
