@@ -7,7 +7,7 @@ Download or clone this repo to your computer. Then install it via FTP or through
 ## Enable
 Go to the plugins menu and activate the plugin. 
 
-## Configuration
+## Configuration / Setting it up
 When you edit any Contact Form 7 form you will be presented with a new tab:
 ![Image](http://www.clark-studios.co.uk/i/1.png)
 
@@ -22,6 +22,9 @@ Now go to the Flamingo Options tab and then enter the same field name into the t
 Now when a user checks that box on the front end the form will save to Flamingo, if it is not ticked then it does not and you just get sent an email as per normal. Whola!
 
 Its pretty simple but it may of some use to someone.
+
+### Me
+Steve Clark - www.clark-studios.co.uk 
 
 
 
