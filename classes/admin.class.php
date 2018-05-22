@@ -32,7 +32,7 @@ Class FLAMINGO_GDPR_ADMIN_CLASS {
 			$message .= '<li>Flamingo is not active <a href="' . admin_url('plugins.php') . '">Activate here</a>.</li>';
 		}
 
-		if( !$opts['LIST_ID']  ) {
+		if( !$wpcf7_active  ) {
 			$message .= '<li>WCF7 is not active <a href="' . admin_url('plugins.php') . '">Activate here</a>.</li>';
 		}
 
@@ -103,8 +103,6 @@ Class FLAMINGO_GDPR_ADMIN_CLASS {
 			$wpcf7      = WPCF7_ContactForm::get_current();
 			$submission = WPCF7_Submission::get_instance();
 
-			print_r($form);
-			die();
 			
 			if ( $submission ) {
 				
