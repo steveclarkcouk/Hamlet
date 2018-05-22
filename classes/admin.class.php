@@ -20,7 +20,7 @@ Class FLAMINGO_GDPR_ADMIN_CLASS {
 	public function admin_notices() {
 
 		$flamingo_active = is_plugin_active('flamingo/flamingo.php');
-		$wpcf7_active = is_plugin_active('flamingo/wp-contact-form-7.php');
+		$wpcf7_active = is_plugin_active('contact-form-7/wp-contact-form-7.php');
 
 		$class = 'notice notice-error';
 		$message = '';
